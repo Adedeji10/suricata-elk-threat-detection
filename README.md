@@ -28,15 +28,21 @@ Ubuntu 24.04, Suricata 8.0.3, Docker \& Docker Compose, ELK Stack 8.15.0
 **Setup Overview**
 
 1\. Suricata installed on an Ubuntu VM, configured to monitor both the primary &#x20;  network interface and loopback
+
 2\. Custom rule (`suricata/local.rules`) added to detect port scans via SYN &#x20;  packet thresholds
+
 3\. ELK stack deployed via Docker Compose on a separate host machine
+
 4\. Filebeat configured to ship `eve.json` alerts across the network to Logstash
+
 5\. Kibana dashboard built to visualize alerts by signature type and over time
 
 **Sample Detections**
 
 See `suricata/sample-alerts/` for real captured alert JSON:
+
 \- `http-alert-testmyids.json` - Emerging Threats signature match on HTTP response content
+
 \- `portscan-alert-custom-rule.json` - Custom rule detecting nmap SYN scan behavior
 
 **Screenshots**
@@ -46,7 +52,9 @@ See `screenshots/` for the full walkthrough, including the Kibana dashboard.
 **Key Troubleshooting Highlights**
 
 \- \*\*YAML indentation bug\*\*: A stray space broke Suricata's config parser - fixed &#x20; by diffing against a backup
+
 \- \*\*Rule file path mismatch\*\*: Custom rule wasn't loading because it was placed &#x20; in the wrong directory (`/etc/suricata/rules/` vs `/var/lib/suricata/rules/`)
+
 \- \*\*Loopback traffic blindness\*\*: Self-scanning the VM's own IP routed traffic &#x20; through the `lo` interface, which Suricata wasn't monitoring - fixed by adding &#x20; a second af-packet listener
 
 **Full Write-up**
