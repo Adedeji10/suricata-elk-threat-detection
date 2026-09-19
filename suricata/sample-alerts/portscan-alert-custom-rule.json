@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-09-16T04:11:44.470308+0000",
+  "flow_id": 49634890031732,
+  "in_iface": "lo",
+  "event_type": "alert",
+  "src_ip": "10.0.2.15",
+  "src_port": 45709,
+  "dest_ip": "10.0.2.15",
+  "dest_port": 554,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "alert": {
+    "action": "allowed",
+    "gid": 1,
+    "signature_id": 1000001,
+    "rev": 1,
+    "signature": "CUSTOM Possible Port Scan Detected",
+    "category": "Attempted Information Leak",
+    "severity": 2
+  },
+  "direction": "to_server",
+  "flow": {
+    "pkts_toserver": 1,
+    "pkts_toclient": 0,
+    "bytes_toserver": 58,
+    "bytes_toclient": 0,
+    "start": "2026-09-16T04:11:44.470308+0000",
+    "src_ip": "10.0.2.15",
+    "dest_ip": "10.0.2.15",
+    "src_port": 45709,
+    "dest_port": 554
+  }
+}
+{
+  "timestamp": "2026-09-16T04:12:43.531713+0000",
+  "flow_id": 876317598709756,
+  "in_iface": "lo",
+  "event_type": "alert",
+  "src_ip": "10.0.2.15",
+  "src_port": 45707,
+  "dest_ip": "10.0.2.15",
+  "dest_port": 1244,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "alert": {
+    "action": "allowed",
+    "gid": 1,
+    "signature_id": 1000001,
