@@ -51,13 +51,13 @@ See `screenshots/` for the full walkthrough, including the Kibana dashboard.
 
 **Key Troubleshooting Highlights**
 
-\- \*\*YAML indentation bug\*\*: A stray space broke Suricata's config parser - fixed &#x20; by diffing against a backup
+\- **YAML indentation bug**: A stray space broke Suricata's config parser - fixed &#x20; by diffing against a backup
 
-\- \*\*Rule file path mismatch\*\*: Custom rule wasn't loading because it was placed &#x20; in the wrong directory (`/etc/suricata/rules/` vs `/var/lib/suricata/rules/`)
+\- **Rule file path mismatch**: Custom rule wasn't loading because it was placed &#x20; in the wrong directory (`/etc/suricata/rules/` vs `/var/lib/suricata/rules/`)
 
-\- \*\*Loopback traffic blindness\*\*: Self-scanning the VM's own IP routed traffic &#x20; through the `lo` interface, which Suricata wasn't monitoring - fixed by adding &#x20; a second af-packet listener
+\- **Loopback traffic blindness**: Self-scanning the VM's own IP routed traffic &#x20; through the `lo` interface, which Suricata wasn't monitoring - fixed by adding &#x20; a second af-packet listener
 
 **Full Write-up**
 
-Read the detailed article on Medium: \[link here once published]
+Read the detailed article on Medium: https://medium.com/@shittuadedeji10/building-a-home-lab-ids-detecting-and-visualizing-threats-with-suricata-and-the-elk-stack-758050d2a4f1
 
